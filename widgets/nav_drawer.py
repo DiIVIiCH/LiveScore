@@ -1,12 +1,12 @@
 import os
 
-from kivymd.navigationdrawer import MDNavigationDrawer, NavigationDrawerHeaderBase
+from libs.kivymd.navigationdrawer import MDNavigationDrawer, NavigationDrawerHeaderBase
 from kivy.lang import Builder
 from kivy.properties import ObjectProperty, NumericProperty, ListProperty
-from kivymd.list import BaseListItem
+from libs.kivymd.list import BaseListItem
 from kivy.uix.boxlayout import BoxLayout
-from kivymd.theming import ThemableBehavior
-from kivymd.elevationbehavior import RectangularElevationBehavior
+from libs.kivymd.theming import ThemableBehavior
+from libs.kivymd.elevationbehavior import RectangularElevationBehavior
 
 root = os.path.split(__file__)[0]
 root = root if root != '' else os.getcwd()

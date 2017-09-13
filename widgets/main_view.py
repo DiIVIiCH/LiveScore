@@ -1,4 +1,4 @@
-from kivymd.navigationdrawer import NavigationLayout
+from libs.kivymd.navigationdrawer import NavigationLayout
 from widgets.nav_drawer import NavDrawer
 from widgets.games_view import GamesView
 class MainView(NavigationLayout):

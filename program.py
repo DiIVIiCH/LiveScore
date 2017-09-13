@@ -1,6 +1,6 @@
 from kivy.app import App
 from widgets.main_view import MainView
-from kivymd.theming import ThemeManager
+from libs.kivymd.theming import ThemeManager
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.properties import NumericProperty

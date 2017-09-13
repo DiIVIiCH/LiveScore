@@ -11,8 +11,8 @@ import requests
 from kivy.core.window import Window
 from widgets.toast import Toast
 from kivy.app import App
-from pytz import timezone
-from tzlocal import get_localzone
+from libs.pytz import timezone
+from libs.tzlocal import get_localzone
 from functools import partial
 
 root = os.path.split(__file__)[0]

@@ -6,9 +6,9 @@ from kivy.uix.button import Button
 from kivy.properties import ObjectProperty, ListProperty
 from kivy.uix.settings import Settings, InterfaceWithNoMenu, SettingItem
 from kivy.uix.label import Label
-from kivymd.dialog import MDDialog
-from kivymd.textfields import MDTextField 
-from kivymd.label import MDLabel
+from libs.kivymd.dialog import MDDialog
+from libs.kivymd.textfields import MDTextField 
+from libs.kivymd.label import MDLabel
 from kivy.core.window import Window
 from kivy.compat import string_types, text_type
 root = os.path.split(__file__)[0]
