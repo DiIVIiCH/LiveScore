@@ -1,0 +1,22 @@
+<Toast>:
+    id: toast
+    size_hint: (None, None)
+    halign: 'center'
+    valign: 'middle'
+    canvas:
+        Color:
+            rgba: (0.5, 0.5, 0.5, self._transparency)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+        Color:
+            rgba: (0.0, 0.0, 0.0, 1.0)
+        Rectangle:
+            size: (self.size[0] - 2, self.size[1] - 2)
+            pos: (self.pos[0] + 1, self.pos[1] + 1)
+        Color:
+            rgba: self.color
+        Rectangle:
+            texture: self.texture
+            size: self.texture_size
+            pos: int(self.center_x - self.texture_size[0] / 2.), int(self.center_y - self.texture_size[1] / 2.)

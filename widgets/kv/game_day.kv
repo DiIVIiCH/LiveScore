@@ -1,0 +1,18 @@
+<GameDay>:
+	do_scroll_y: True
+	do_scroll_x: False
+	#on_scroll_y: root.update()
+    bar_width: 0
+    effect_cls: "ScrollEffect"
+    canvas:
+        Color:
+            rgb: .95, .95, .95
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    RecycleBoxLayout:
+        default_size: None, self.parent.height/5 if self.parent.height/5>140 else dp(140)
+        default_size_hint: 1, None
+        size_hint_y: None
+        height: self.minimum_height
+        orientation: 'vertical'

@@ -1,0 +1,78 @@
+<TeamLogo>:
+    size_hint_y: None
+    height: .72*self.parent.size[1]
+    width: self.height
+    canvas:
+        Rectangle:
+            size: self.height, self.height
+            pos: self.parent.pos[0]+(self.parent.size[0]/2-self.height/2), self.pos[1]
+            source: self.source
+
+
+<GameLayout>:
+    BoxLayout:
+        size_hint_y: .9
+        padding: 3
+        canvas:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+            Color:
+                rgba: .87,.87,.87,1
+            Rectangle:
+                pos: self.pos[0], self.pos[1]-1
+                size: self.size[0], 2
+        BoxLayout:
+            orientation: 'vertical'
+            
+            TeamLogo:
+                source: root.visitorLogo
+
+            Label:
+                id: vt
+                font_size: str(root.size[1]/5.5)+'sp'
+                bold: True
+                text: root.visitorTeam
+                color: root.text_color
+        BoxLayout:
+            orientation: 'vertical'
+            BoxLayout:
+                Label:
+                    id: sc
+                    font_size: str(root.size[1]/6.5)+'sp'
+                    bold: True
+                    text: str(root.visitorScore)
+                    color: root.text_color
+                Label:
+                    id: sc
+                    size_hint_x: .1
+                    font_size: str(root.size[1]/6.5)+'sp'
+                    bold: True
+                    text: ':'
+                    color: root.text_color
+                Label:
+                    id: sc
+                    font_size: str(root.size[1]/6.5)+'sp'
+                    bold: True
+                    text: str(root.homeScore)
+                    color: root.text_color
+            Label:
+                id: st
+                font_size: str(root.size[1]/7.5)+'sp'
+                bold: True
+                text: root.status
+                color: root.text_color
+
+        BoxLayout:
+            orientation: 'vertical'
+            TeamLogo:
+                source: root.homeLogo
+
+            Label:
+                id: ht
+                font_size: str(root.size[1]/5.5)+'sp'
+                bold: True
+                text: root.homeTeam
+                color: root.text_color

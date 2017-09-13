@@ -1,0 +1,29 @@
+#:import MDSwitch kivymd.selectioncontrols.MDSwitch
+
+<LiveScoreSettingsInterface>:
+	canvas:
+		Color:
+			rgb: .95, .95, .95
+		Rectangle:
+			size: self.size
+			pos: self.pos
+
+<LiveScoreSettings>:  
+    interface_cls: 'LiveScoreSettingsInterface'
+
+
+<LiveScoreSettingBoolean>:  
+	AnchorLayout:
+		anchor_x: 'center'
+	    MDSwitch:      	
+	    	size_hint:    None, None   
+	    	size: dp(40), dp(50)
+	        active: bool(root.values.index(root.value)) if root.value in root.values else False
+	        on_active: root.value = root.values[int(args[1])]
+
+
+<LiveScoreSettingString>:
+    Label:
+        text: root.value or ''
+        pos: root.pos
+        font_size: '15sp'
