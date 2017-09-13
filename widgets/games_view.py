@@ -6,7 +6,7 @@ from widgets.game_carousel import GameCarousel
 from widgets.date_picker import DatePicker
 from functools import partial
 from datetime import datetime
-from pytz import timezone, utc
+from libs.pytz import timezone, utc
 
 root = os.path.split(__file__)[0]
 root = root if root != '' else os.getcwd()
