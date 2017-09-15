@@ -116,7 +116,7 @@ class GameDay(RecycleView):
 			return time_str
 
 	def on_touch_down(self, touch):
-		super(GameDay, self).on_touch_down(touch)		   
+		super().on_touch_down(touch)		   
 		if touch.is_double_tap:
 			threading.Thread(target = partial(self.update, True)).start()
 		self._touch = touch
